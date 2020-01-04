@@ -22,13 +22,13 @@ class DicePage extends StatefulWidget {
 }
 
 class _DicePageState extends State<DicePage> {
-  int DiceNum1 = 1;
-  int DiceNum2 = 1;
+  int diceNum1 = 1;
+  int diceNum2 = 1;
 
   void changeDice() {
     setState(() {
-      DiceNum1 = Random().nextInt(6) + 1;
-      DiceNum2 = Random().nextInt(6) + 1;
+      diceNum1 = Random().nextInt(6) + 1;
+      diceNum2 = Random().nextInt(6) + 1;
     });
   }
 
@@ -43,7 +43,7 @@ class _DicePageState extends State<DicePage> {
                 changeDice();
                 print('left button pressed!');
               },
-              child: Image.asset('images/dice$DiceNum1.png'),
+              child: Image.asset('images/dice$diceNum1.png'),
             ),
           ),
           Expanded(
@@ -52,7 +52,7 @@ class _DicePageState extends State<DicePage> {
                 changeDice();
                 print('right button pressed!');
               },
-              child: Image.asset('images/dice$DiceNum2.png'),
+              child: Image.asset('images/dice$diceNum2.png'),
             ),
           )
         ],
